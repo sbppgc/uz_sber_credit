@@ -1,0 +1,28 @@
+1. Сreate table by db/cms_uz_sber_credit_attempts.sql
+2. Copy folder UzSberCredit to site root directory
+3. Copy files UzSberCredit/src/pay_sber_credit.php and src/sber_credit_return.php to site root directory
+4. Add to site template: templates/uz_sber_credit.tpl
+
+4. Add to customers letter link like:
+
+http[s]://yoursite.ru/pay_sber_credit.php?id=_id_order_&sign=_sign_
+
+Where _id_order_ - order nember.
+_sign_ - string calcs as md5(_id_order_.'_1V95RNZI')
+
+Example:
+
+$idOrder = 123; // order to pay
+$sign = md5($idOrder.'_1V95RNZI');
+$url = "https://mysite.ru/pay_sber_credit.php?id=".$idOrder."&sign=".$sign;
+
+For using in template _order_letters_ru.tpl , set order_body (order number found in ##num## var):
+
+##setvar @sber_pay_sign = md5(num.'_1V95RNZI')##
+
+<a href="http://mysite.ru/pay_sber_credit.php?id=##num##&sign=##sber_pay_sign##" target="_blank">To pay with sberbank credit</a>
+
+
+
+5. (?) Set in sber site side, using returnUrl/failUrl from request
+
