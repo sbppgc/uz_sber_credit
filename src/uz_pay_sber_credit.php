@@ -29,8 +29,6 @@ $oResponse->start();
 
 $res = "";
 
-//require 'classes/LogTrait.php';
-//require 'classes/AmiroFacade.php';
 require 'classes/Exception/BadConfigException.php';
 require 'classes/Factory.php';
 require 'classes/Config.php';

@@ -1,2 +1,2 @@
 <?php
-require 'UzSberCredit/src/uz_sber_credit_return.php';
+require 'uz_sber_credit/uz_sber_credit_return.php';
