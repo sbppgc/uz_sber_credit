@@ -2,7 +2,9 @@
 Sberbank credits for Amiro.CMS
 
 Copyright Ugol zreniya. All rights reserved.
+
 Author Sergey Prisyazhnyuk <sbpmail@ya.ru>
+
 License: MIT; see LICENSE.txt
 
 Install notes see in docs/install.txt
